@@ -5,6 +5,7 @@
     --gris: #94a3b8;
     --gris-oscuro: #64748b;
     --negro: #000;
+    --rojo-secundario: #facaca;
 }
 
 body {
@@ -60,6 +61,7 @@ header h1 {
     width: 95%;
     margin: 0 auto;
     padding: 10rem 0;
+    background: var(--blanco);
 }
 @media (min-width: 768px) {
     .formulario {
@@ -72,7 +74,7 @@ header h1 {
     text-align: center;
     display: block;
     text-transform: uppercase;
-    color: var(--blanco);
+    color: var(--azul);
     margin-bottom: 4rem;
     padding-bottom: 1rem;
     border-bottom: 2px solid var(--azul);
@@ -97,6 +99,12 @@ header h1 {
     border: none;
     flex: 1;
     font-size: 1.6rem;
+}
+.formulario .campo .error-input {
+    border: 3px solid #b91c1c;
+}
+.formulario .campo .success-input {
+    border: 3px solid #2cbe75;
 }
 .formulario input[type="submit"] {
     background-color: #1048a4;
@@ -127,7 +135,6 @@ header h1 {
     padding: 1rem;
     border: none;
     border-radius: 1rem;
-    text-align: center;
     background-color: var(--gris-claro);
 }
 
@@ -144,6 +151,7 @@ header h1 {
     background-color: var(--blanco);
     border-left: 5px solid #b91c1c;
     color: #b91c1c;
+    background: var(--rojo-secundario);
 }
 .alerta.success {
 }
@@ -351,17 +359,23 @@ main {
 .modal .cerrar-modal img {
     width: 100%;
 }
+.modal .cerrar-modal img:hover {
+    cursor: pointer;
+}
 
 .modal .formulario {
     max-width: 80rem;
-    width: 40rem;
+    width: 50rem;
+    margin-top: 5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
     transition-property: all;
     transition-duration: 300ms;
     transition-timing-function: ease-in;
     opacity: 0;
 }
 .modal label {
-    color: var(--blanco);
+    color: var(--gris-oscuro);
 }
 body .modal {
     overflow: hidden;
