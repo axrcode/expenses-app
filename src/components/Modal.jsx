@@ -69,6 +69,7 @@ const Modal = ({
                         placeholder="Añadir nombre del gasto (ej. Compra despensa)" 
                         value={nombre}
                         onChange={ e => setNombre(e.target.value) }
+                        autoComplete="off"
                     />
                 </div>
 
@@ -82,6 +83,7 @@ const Modal = ({
                         placeholder="Añadir cantidad del gasto (ej. 300)"
                         value={cantidad}
                         onChange={ e => setCantidad(Number(e.target.value)) } 
+                        autoComplete="off"
                     />
                 </div>
                 
